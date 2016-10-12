@@ -27,9 +27,9 @@ var HeroesComponent = (function () {
     HeroesComponent = __decorate([
         core_1.Component({
             selector: 'my-heroes',
-            templateUrl: 'app/templates/heroes-list-template.html',
+            templateUrl: 'app/templates/heroes.component.html',
             // providers: [HeroService],
-            styleUrls: ['app/css/main-component-style.css']
+            styleUrls: ['app/css/heroes.component.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])
     ], HeroesComponent);
