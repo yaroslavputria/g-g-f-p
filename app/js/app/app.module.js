@@ -11,19 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var router_1 = require('@angular/router');
 var http_1 = require('@angular/http');
-//import { AppRoutingModule } from './app-routing.module';
-// Imports for loading & configuring the in-memory web api
-var in_memory_web_api_module_1 = require('angular-in-memory-web-api/in-memory-web-api.module');
-var in_memory_data_service_1 = require('./in-memory-data.service');
-require('./rxjs-extensions');
-var hero_service_1 = require('./hero.service');
-var hero_detail_component_1 = require('./hero-detail.component');
 var app_component_1 = require('./app.component');
-var heroes_component_1 = require('./heroes.component');
-var dashboard_component_1 = require('./dashboard.component');
-var hero_search_component_1 = require('./hero-search.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,37 +21,11 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                http_1.HttpModule,
-                //AppRoutingModule,
-                in_memory_web_api_module_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
-                router_1.RouterModule.forRoot([
-                    {
-                        path: '',
-                        redirectTo: '/dashboard',
-                        pathMatch: 'full'
-                    },
-                    {
-                        path: 'heroes',
-                        component: heroes_component_1.HeroesComponent
-                    },
-                    {
-                        path: 'dashboard',
-                        component: dashboard_component_1.DashboardComponent
-                    },
-                    {
-                        path: 'detail/:id',
-                        component: hero_detail_component_1.HeroDetailComponent
-                    },
-                ])
+                http_1.HttpModule
             ],
             declarations: [
-                app_component_1.AppComponent,
-                hero_detail_component_1.HeroDetailComponent,
-                heroes_component_1.HeroesComponent,
-                dashboard_component_1.DashboardComponent,
-                hero_search_component_1.HeroSearchComponent
+                app_component_1.AppComponent
             ],
-            providers: [hero_service_1.HeroService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
