@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 import { AppService } from './app.service';
 
@@ -7,11 +7,7 @@ import { AppService } from './app.service';
   templateUrl: 'app/templates/app.component.html',
   styleUrls: [ 'app/css/app.component.css' ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   constructor(private appService: AppService){}
   title = 'Github Gists Files Project';
-  ngOnInit(): void {
-    this.appService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
-  }
 }

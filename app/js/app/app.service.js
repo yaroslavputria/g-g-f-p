@@ -51,16 +51,4 @@ var AppService = (function () {
     return AppService;
 }());
 exports.AppService = AppService;
-//   getFilesForCurrentUser(userName, userNameInput) {
-//     userNameInput.value = userName;
-//     return this.getAllGists(userName)
-//       .then(this.filterFiles)
-//       .then(this.filterByName);
-//   }
-//   refreshGists (userName) {
-//     return this.getAllGists(userName)
-//       .then(this.filterFiles)
-//       .then(this.filterByName);
-//   }
-// } 
 //# sourceMappingURL=app.service.js.map

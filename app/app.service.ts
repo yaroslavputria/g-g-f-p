@@ -51,4 +51,4 @@ export class AppService {
 //       .then(this.filterFiles)
 //       .then(this.filterByName);
 //   }
-// }
+}

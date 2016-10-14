@@ -10,20 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var app_service_1 = require('./app.service');
-var AppComponent = (function () {
-    function AppComponent(appService) {
+var formConfig_1 = require('./formConfig');
+var FormComponent = (function () {
+    function FormComponent(appService) {
         this.appService = appService;
-        this.title = 'Github Gists Files Project';
+        this.formConfig = formConfig_1.formConfig;
     }
-    AppComponent = __decorate([
+    FormComponent.prototype.ngOnInit = function () {
+        // this.appService.getHeroes()
+        //   .then(heroes => this.heroes = heroes.slice(1, 5));
+    };
+    FormComponent.prototype.find = function (username, lang, type) {
+    };
+    FormComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/templates/app.component.html',
-            styleUrls: ['app/css/app.component.css']
+            selector: 'form-comp',
+            templateUrl: 'app/templates/form.component.html',
+            styleUrls: ['app/css/form.component.css']
         }), 
         __metadata('design:paramtypes', [app_service_1.AppService])
-    ], AppComponent);
-    return AppComponent;
+    ], FormComponent);
+    return FormComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.FormComponent = FormComponent;
+//# sourceMappingURL=form.component.js.map
