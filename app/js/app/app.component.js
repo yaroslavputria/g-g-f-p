@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var app_service_1 = require('./app.service');
+//import { AppService } from './app.service';
 var AppComponent = (function () {
-    function AppComponent(appService) {
-        this.appService = appService;
+    function AppComponent() {
+        //constructor(private appService: AppService){}
         this.title = 'Github Gists Files Project';
     }
     AppComponent = __decorate([
@@ -21,7 +21,7 @@ var AppComponent = (function () {
             templateUrl: 'app/templates/app.component.html',
             styleUrls: ['app/css/app.component.css']
         }), 
-        __metadata('design:paramtypes', [app_service_1.AppService])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
