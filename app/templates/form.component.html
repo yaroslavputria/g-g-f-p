@@ -9,5 +9,8 @@
 	<select name="type" #type>
 		<option *ngFor="let typeItem of formConfig.arrOfTypes" value="{{typeItem}}">{{typeItem}}</option>
 	</select>
-	<button #find (click)="find(username, lang, type); $event.stopPropagation()">Find</button>
+	<button #find (click)="findFiles(username.value, lang.value, type.value); $event.stopPropagation()">Find</button>
 </form>
+<ul *ngIf="files">
+  <li *ngFor="let file of files">{{file}}</li>
+</ul>

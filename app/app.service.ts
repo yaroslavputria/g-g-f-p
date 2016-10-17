@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AppService {
@@ -8,7 +9,7 @@ export class AppService {
   getAllGists(name: string): Promise<any> {
     return this.http.get('https://api.github.com/users/' + name + '/gists')
     .toPromise()
-    .then(res => res.json());
+    .then(res => res.json())
   } 
 
   filterFiles(gists: any[], type: string, language: string): any[] {//should create own data structure instead 'any'!!!!!!

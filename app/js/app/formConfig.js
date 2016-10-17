@@ -1,7 +1,6 @@
 "use strict";
 exports.formConfig = {
-    arrOfLangs: [1, 2, 3, 4, 5, 6],
-    arrOfTypes: [0, 5, 6, 73],
-    rootEl: document.body
+    arrOfLangs: ['', 'JSON', 'JavaScript', 'Text', 'Markdown'],
+    arrOfTypes: ['', 'application/json', 'application/javascript', 'text/plain']
 };
 //# sourceMappingURL=formConfig.js.map

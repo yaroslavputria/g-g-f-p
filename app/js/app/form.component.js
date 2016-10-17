@@ -17,10 +17,17 @@ var FormComponent = (function () {
         this.formConfig = formConfig_1.formConfig;
     }
     FormComponent.prototype.ngOnInit = function () {
-        // this.appService.getHeroes()
-        //   .then(heroes => this.heroes = heroes.slice(1, 5));
     };
-    FormComponent.prototype.find = function (username, lang, type) {
+    FormComponent.prototype.findFiles = function (username, lang, type) {
+        var _this = this;
+        this.appService.getFileNamesPromise({ userName: username, lang: lang, type: type })
+            .catch(function (arr) {
+            _this.files = null;
+            console.error("Something wrong!!!!!!!");
+        })
+            .then(function (data) {
+            _this.files = data;
+        });
     };
     FormComponent = __decorate([
         core_1.Component({

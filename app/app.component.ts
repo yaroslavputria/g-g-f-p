@@ -10,4 +10,4 @@ import { Component} from '@angular/core';
 export class AppComponent{
   //constructor(private appService: AppService){}
   title = 'Github Gists Files Project';
-}/*****/
+}
