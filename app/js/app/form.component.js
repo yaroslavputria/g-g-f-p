@@ -15,8 +15,19 @@ var FormComponent = (function () {
     function FormComponent(appService) {
         this.appService = appService;
         this.formConfig = formConfig_1.formConfig;
+        this.myWindow = window;
+        this.badCurly = 'clssss';
+        // this.tmpEv.emit(null);
     }
+    //?????
+    // @Input() forTmpEv: string;
+    // @Output() tmpEv:EventEmitter<any> = new EventEmitter();
+    // processTmpEv(): void {
+    //   debugger;
+    //   this.forTmpEv = "my own event emitted!!!";
+    // }
     FormComponent.prototype.ngOnInit = function () {
+        console.dir(this);
     };
     FormComponent.prototype.findFiles = function (username, lang, type) {
         var _this = this;
@@ -29,11 +40,24 @@ var FormComponent = (function () {
             _this.files = data;
         });
     };
+    FormComponent.prototype.logger = function (data) {
+        console.dir(data);
+        // console.log(this.tmpEv);
+        // this.tmpEv.emit(null);
+    };
+    Object.defineProperty(FormComponent.prototype, "test", {
+        get: function () {
+            return "its from getter!!!";
+        },
+        enumerable: true,
+        configurable: true
+    });
     FormComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'form-comp',
-            templateUrl: 'app/templates/form.component.html',
-            styleUrls: ['app/css/form.component.css']
+            templateUrl: '../../templates/form.component.html',
+            styleUrls: ['../../css/form.component.css'],
         }), 
         __metadata('design:paramtypes', [app_service_1.AppService])
     ], FormComponent);

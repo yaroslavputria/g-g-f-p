@@ -12,7 +12,7 @@ export class AppService {
     .then(res => res.json())
   } 
 
-  filterFiles(gists: any[], type: string, language: string): any[] {//should create own data structure instead 'any'!!!!!!
+  filterFiles(gists: any[], type: string, language: string): any[] {//should create own data structures(intrafaces) instead 'any'!!!!!!
     let arrOfFiles = [];
     for (let i = 0; i < gists.length; i++) {
       for (let prop in gists[i].files) {
