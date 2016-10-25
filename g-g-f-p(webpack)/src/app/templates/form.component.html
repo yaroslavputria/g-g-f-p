@@ -1,0 +1,20 @@
+<form (ngSubmit)="findFiles(username.value, lang.value, type.value);">
+	<label for="username">Username</label>
+	<input type="text" name="username" #username value="my8bit">
+	<label for="language">Language</label>
+	<select name="lang" #lang>
+		<option *ngFor="let langItem of formConfig.arrOfLangs" bind-value="langItem">{{langItem}}</option>
+	</select>
+	<label for="type">Type</label>
+	<select name="type" #type>
+		<option *ngFor="let typeItem of formConfig.arrOfTypes" [value]="typeItem">{{typeItem}}</option>
+	</select>
+	<button type="button" #find on-click="findFiles(username.value, lang.value, type.value)">Find</button>
+</form>
+<ul *ngIf="files">
+	<li *ngFor="let file of files">{{file}}</li>
+</ul>
+{{myWindow.console.log("it's cheating!")}}
+<div #vriabl class="bad curly special" (click)="logger(vriabl)">ewfewf</div>
+
+<!-- <div (tmpEv)="processTmpEv()">{{forTmpEv}}</div> -->

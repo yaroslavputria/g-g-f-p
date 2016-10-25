@@ -8,11 +8,6 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "app/js"
-  },
-  "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main/main.d.ts"
-  ]
+    "suppressImplicitAnyIndexErrors": false
+  }
 }
